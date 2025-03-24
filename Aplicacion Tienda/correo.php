@@ -4,7 +4,7 @@
 
     function enviar_correos ($carrito, $pedido, $correo) {
         $cuerpo = crear_correo($carrito, $pedido, $correo);
-        return enviar_correo_multiples("$correo, dwes@afleal.es", $cuerpo, "Pedido $pedido confirmado");
+        return enviar_correo_multiples("$correo, correo@prueba.es", $cuerpo, "Pedido $pedido confirmado");
     }
 
    function crear_correo ($carrito, $pedido, $correo) {
@@ -50,9 +50,9 @@
     $mail -> SMTPSecure = "tls";
     $mail -> Host       = "smtp.ionos.es";
     $mail -> Port       = 587;
-    $mail -> Username   = "dwes@afleal.es"; // Usuario de ionos
-    $mail -> Password   = "Ch1nd4sv1nt0."; // Contrasenha de ionos
-    $mail -> SetFrom ('dwes@afleal.es', 'Sistema de pedidos');
+    $mail -> Username   = "correo@prueba.es";
+    $mail -> Password   = "dSDEfdj43434.";
+    $mail -> SetFrom ('correo@prueba.es', 'Sistema de pedidos');
     $mail -> Subject    = $asunto;
     $mail -> MsgHTML($cuerpo);
     $mail -> CharSet    = "UTF-8";
